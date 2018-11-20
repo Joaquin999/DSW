@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Machangos Corporation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+
+
+
+</head>
+<body>
+    <header>
+        <h1>Machangos Corporation</h1>
+    </header>
+    <nav>
+            <a href="">Home</a> |
+            <a href="">Gallery</a> |
+            <a href="">Store</a> |
+            <a href="">About</a>
+            <img src="Logo.jpg" height="120px" width="120px" style="margin-left:80%">
+    </nav>
+
+    <div id="content">
+    <section>
+        <h2>SECTION Machangos Corporation brings you the best way to get high</h2>
+        <p>If you want to get high we can offer you the best books you can get in the universe, we assure you, dont get mad and get this  right now!!!
+                If you want to get high we can offer you the books you can get in the universe, we assure you, dont get mad and get this  right now!!!
+                If you want to get high we can offer you the books you can get in the universe, we assure you, dont get mad and get this  right now!!!
+                If you want to get high we can offer you the books you can get in the universe, we assure you, dont get mad and get this  right now!!!
+                If you want to get high we can offer you the books you can get in the universe, we assure you, dont get mad and get this  right now!!!
+                If you want to get high we can offer you the books you can get in the universe, we assure you, dont get mad and get this  right now!!!
+                If you want to get high we can offer you the books you can get in the universe, we assure you, dont get mad and get this  right now!!!
+        </p>
+        <video src="video0.mp4" width="640" height="480" controls></video>
+    </section>
+    <aside>
+            <h2>Mind blowing aside canvas</h2>
+            <canvas id="canvasGlowing" width="567" height="400" ></canvas>
+    </aside>
+    <article>
+            <h2>ARTICLE Machangos Corporation brings you the best way to get high</h2>
+            <p>If you want to get high we can offer you the bestweed you can get in the universe, we assure you, dou, dont get mad and get this shit right now!!!
+                    If you want to get high we can offer you the books you can get in the universe, we assure you, dou, dont get mad and get this  right now!!!
+                    If you want to get high we can offer you the books you can get in the universe, we assure you, dou, dont get mad and get this  right now!!!
+                    If you want to get high we can offer you the books you can get in the universe, we assure you, dou, dont get mad and get this  right now!!!
+                    If you want to get high we can offer you the books you can get in the universe, we assure you, dou, dont get mad and get this  right now!!!
+                    If you want to get high we can offer you the books you can get in the universe, we assure you, dou, dont get mad and get this  right now!!!
+                    If you want to get high we can offer you the books you can get in the universe, we assure you, dou, dont get mad and get this  right now!!!
+                    If you want to get high we can offer you the books you can get in the universe, we assure you, dou, dont get mad and get this  right now!!!
+            </p>
+            <video src="video1.mp4" width="640" height="480" controls></video>
+            <video src="video2.webm" width="640" height="480" controls></video>
+    </article>
+
+</div>
+
+<footer>
+  <details>
+    <summary>Copyright 2018-2019.</summary>
+      <p>Copyright machangos corporation S.A. all Rights Reserved - Andorra n179ª A </p>
+    </details>
+  </footer>
+</body>
+<script>
+        var canvas = document.getElementById('canvasGlowing');
+        var context = canvas.getContext('2d');
+
+        var lastX = context.canvas.width * Math.random();
+        var lastY = context.canvas.height * Math.random();
+        var hue = 0;
+        function line() {
+          context.save();
+          context.translate(context.canvas.width/2, context.canvas.height/2);
+          context.scale(0.5, 0.5);
+          context.translate(-context.canvas.width/2, -context.canvas.height/2);
+          context.beginPath();
+          context.lineWidth = 5 + Math.random() * 10;
+          context.moveTo(lastX, lastY);
+          lastX = context.canvas.width * Math.random();
+          lastY = context.canvas.height * Math.random();
+          context.bezierCurveTo(context.canvas.width * Math.random(),
+                                context.canvas.height * Math.random(),
+                                context.canvas.width * Math.random(),
+                                context.canvas.height * Math.random(),
+                                lastX, lastY);
+
+          hue = hue + 10 * Math.random();
+          context.strokeStyle = 'hsl(' + hue + ', 50%, 50%)';
+          context.shadowColor = 'white';
+          context.shadowBlur = 10;
+          context.stroke();
+          context.restore();
+        }
+
+        setInterval(line, 50);
+
+        function blank() {
+          context.fillStyle = 'rgba(0,0,0,0.1)';
+          context.fillRect(0, 0, context.canvas.width, context.canvas.height);
+        }
+        setInterval(blank, 40);
+
+       </script>
+</html>

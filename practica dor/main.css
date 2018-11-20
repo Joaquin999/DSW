@@ -1,0 +1,44 @@
+
+header{
+  background-color: antiquewhite;
+}
+
+nav {
+  background-color: darkturquoise;
+}
+
+body {
+    margin: 0 1.5%;
+    background-color: antiquewhite;
+}
+
+
+article {
+    float: left;
+    width: 63%;
+    margin-bottom: 80px;
+    background-color: orange;
+  }
+
+  section {
+    float: left;
+    width: 63%;
+    background-color:  #9c9ce0;
+  }
+
+
+  aside {
+    float: right;
+    width: 37%;
+    background-color: burlywood;
+  }
+
+  footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: #54e9de;
+    text-align: center;
+  }
