@@ -1,0 +1,283 @@
+<html lang="es">
+<head>
+  <title>Musicale</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+
+  .carousel-inner img {
+      width: 100%;
+      margin: auto;
+      min-height:200px;
+  }
+
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none;
+    }
+  }
+  </style>
+  <script src="../responsive-paginate.js"></script>
+  <script>
+      $(document).ready(function () {
+          $.fn.generateRandomPagination = function(options)
+          {
+              var content = '<li class="left-etc"><a href="#">&laquo;</a></li>';
+              for (var i = 1; i <= 30; i++)
+              {
+                  if (i == options.selected_value)
+                      content += '<li class="active"><span>' + i + '</span></li>';
+                  else
+                      content += '<li><a href="">' + i + '</a></li>';
+              }
+              content += '<li><a href="#">&raquo;</a></li>';
+              $(this).html(content);
+          }
+
+          for (var i = 1; i <= 1; i++)
+          {
+              $("#tests").append('<ul class="pagination"></ul>');
+              $("#tests").append("<br>");
+          }
+
+          var i = 1;
+          $(".pagination").each(function(){
+              $(this).generateRandomPagination({
+                  max_value: 100,
+                  selected_value: i
+              });
+              i += 19;
+          });
+          $(".pagination").rPage();
+      });
+
+  </script>
+  <script src="responsiveslides.min.js"></script>
+  <script>
+    $(function () {
+      $("#slider1").responsiveSlides({
+        maxwidth: 800,
+        speed: 800
+      });
+    });
+  </script>
+
+</head>
+<body>
+
+<nav class="navbar navbar-inverse testnav" style="margin-top:16px;">
+
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="javascript:void(0);">Musicale</a>
+      </div>
+      <ul class="nav navbar-nav" style="visibility: visible;">
+        <li class="active"><a href="javascript:void(0);">Index</a></li>
+      </ul>
+      <ul class="nav navbar-nav" style="visibility: visible;">
+        <li class="active"><a href="javascript:void(0);">Musicians</a></li>
+      </ul>
+      <ul class="nav navbar-nav" style="visibility: visible;">
+        <li class="active"><a href="javascript:void(0);">Bands</a></li>
+      </ul>
+      <ul class="nav navbar-nav" style="visibility: visible;">
+        <li class="active"><a href="javascript:void(0);">Songs</a></li>
+      </ul>
+      <ul class="nav navbar-nav" style="visibility: visible;">
+        <li class="active"><a href="javascript:void(0);">Extras</a></li>
+      </ul>
+    </div>
+
+</nav>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+    </ol>
+
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="music1.jpg" height="700px" alt="Image">
+        <div class="carousel-caption">
+          <h3></h3>
+          <p></p>
+        </div>
+      </div>
+
+
+
+      <div class="item">
+        <img src="music2.jpg" height="700px" alt="Image">
+        <div class="carousel-caption">
+          <h3></h3>
+          <p></p>
+        </div>
+      </div>
+    </div>
+
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<div class="container text-center">
+  <h1>Musicale</h1>
+  <div class="row">
+    <div class="col-sm-4">
+        <video width="320" height="240" controls>
+            <source src="musicv1.mp4" type="video/mp4">
+          </video>
+      <p>John Lennon</p>
+    </div>
+    <div class="col-sm-4">
+        <video width="320" height="240" controls>
+            <source src="musicv2.mp4" type="video/mp4">
+          </video>
+      <p>Metallica</p>
+    </div>
+    <div class="col-sm-4">
+      <div class="well">
+       <h3>The most famous artists</h3>
+      </div>
+      <div class="well">
+       <p>This groups made history</p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="well">
+       <p>More famous than Jesus</p>
+      </div>
+      <div class="well">
+       <p>You will never forget this songs</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+        <video width="320" height="240" controls>
+            <source src="musicv3.mp4" type="video/mp4">
+          </video>
+      <p>Queen</p>
+    </div>
+    <div class="col-sm-4">
+        <video width="320" height="240" controls>
+            <source src="musicIglesias.mp4" type="video/mp4">
+          </video>
+      <p>Julio Iglesias</p>
+    </div>
+  </div>
+  <div class="row">
+    <ul class="rslides" id="slider1">
+      <li><img src="images/1.jpg" alt="" height="500px" width="800px"></li>
+      <li><img src="images/2.jpg" alt="" height="500px" width="800px"></li>
+      <li><img src="images/3.jpg" alt="" height="500px" width="800px"></li>
+      <li><img src="images/4.jpg" alt="" height="500px" width="800px"></li>
+    </ul>
+  </div>
+
+<div class="row">
+  <p>
+		Por defecto:<br/>
+		<input type='checkbox' name='checkbox1' />
+	</p>
+
+	<p>
+		Cambio por evento<br/>
+		<input type='checkbox' name='checkbox2' checked />
+	</p>
+	<p>
+		Diferente:<br/>
+		<input type='checkbox' name='checkbox3' />
+	</p>
+
+	<p>
+		Pestaña de texto:<br/>
+		<input type='checkbox' name='checkbox4' />
+	</p>
+
+	<p>
+		Pestañas de texto iguales:<br/>
+		<input type='checkbox' name='checkbox5' />
+	</p>
+
+	<p>
+		Desactivado:<br/>
+		<input type='checkbox' name='checkbox10' disabled />
+	</p>
+
+	<p>
+		Tamaños (xs, sm, md, lg):<br/>
+		<input type='checkbox' name='checkbox6' />
+        <input type='checkbox' name='checkbox7' />
+        <input type='checkbox' name='checkbox8' />
+        <input type='checkbox' name='checkbox9' />
+	</p>
+  <div id="tests" style="position: relative; background-color: #f5f5f5; margin: 0 auto; text-align: center; margin-top: 50px;"></div>
+</div>
+  </div>
+</div><br>
+<footer class="container-fluid text-center">
+  <h3>David Sánchez & Joaquín de León</h3>
+</footer>
+<script src="bootstrap-switch.js" ></script>
+<script>
+// Remember set you events before call bootstrapSwitch or they will fire after bootstrapSwitch's events
+$("[name='checkbox2']").change(function() {
+	if(!confirm('¿Quieres cancelarme?')) {
+		this.checked = true;
+	}
+});
+
+$("[name='checkbox1'],[name='checkbox2'], [name='checkbox10']").bootstrapSwitch();
+
+$("[name='checkbox3']").bootstrapSwitch({
+	on: 'Activado',
+	off: 'Desactivado',
+	onClass: 'success',
+	offClass: 'warning'
+});
+
+$("[name='checkbox4']").bootstrapSwitch({
+    onLabel: 'Cerrado',
+    offLabel: 'Abierto'
+});
+
+$("[name='checkbox5']").bootstrapSwitch({
+    same: true
+});
+
+$("[name='checkbox6']").bootstrapSwitch({
+    size: 'xs'
+});
+$("[name='checkbox7']").bootstrapSwitch({
+    size: 'sm'
+});
+$("[name='checkbox8']").bootstrapSwitch({
+    size: 'md'//default
+});
+$("[name='checkbox9']").bootstrapSwitch({
+    size: 'lg'
+});
+
+
+</script>
+</body>
+</html>

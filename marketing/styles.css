@@ -1,0 +1,67 @@
+
+.timeline-theme-1 {
+  width: 800px;
+  margin: 100px auto; }
+
+.timeline-1 .timeline-list {
+  width: 800px;
+  height: 350px; }
+
+.timeline-1 .timeline-item {
+  width: 800px;
+  height: 350px;
+  background: #ddd;
+  border: none; }
+
+.timeline-visual {
+  float: left;
+  width: 43%;
+  margin-right: 3%;
+  line-height: 1; }
+  .timeline-visual img {
+    max-width: 100%; }
+
+.timeline-detail {
+  float: left;
+  width: 53%;
+  height: 100%;
+  overflow-y: auto; }
+
+.timeline-detail-list {
+  margin: 10px;
+  padding: 10px; }
+  .timeline-detail-list li {
+    margin-bottom: 0.4rem; }
+
+.timeline-theme-2 {
+  width: 600px;
+  margin: 70px auto auto; }
+
+.timeline-small-box .timeline-list {
+  width: 600px;
+  height: 250px; }
+
+.timeline-small-box .box-item {
+  float: left;
+  width: 600px;
+  height: 250px;
+  color: #fff;
+  text-align: center; }
+
+.theme-1 {
+  background: #45B39D; }
+
+.theme-2 {
+  background: #2ECC71  ; }
+
+.theme-3 {
+  background: #16A085; }
+
+.theme-4 {
+  background: #93C763; }
+
+.theme-5 {
+  background: #73C6B6; }
+
+.theme-6 {
+  background: #990055; }
